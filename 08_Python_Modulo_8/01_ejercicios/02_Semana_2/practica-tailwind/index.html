@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Digital Twins Lab - Agenda tu demostración"
+    />
+    <title>Digital Twins Lab - Agenda tu Demo</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Flowbite CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind Config -->
+    <script src="tailwind.config.js"></script>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex items-center justify-center pt-24 pb-12 px-4">
+      <div id="form-container"></div>
+    </main>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <!-- Flowbite JS (cargar primero) -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+
+    <!-- Component Loader (cargar después de Flowbite) -->
+    <script src="js/componentLoader.js"></script>
+  </body>
+</html>

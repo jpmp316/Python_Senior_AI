@@ -1,0 +1,134 @@
+<!-- 
+  Componente: FormBookingDemo
+  Descripción: Formulario para agendar demostraciones con validación HTML5
+  Dependencias: Tailwind CSS, Flowbite
+  Uso: Cargar dinámicamente en index.html
+-->
+<section class="w-full max-w-4xl mx-auto" aria-labelledby="form-title">
+  <h2 id="form-title" class="text-4xl font-bold text-heading mb-8 text-center">
+    Agenda tu demo
+  </h2>
+
+  <form
+    class="bg-neutral-secondary-soft p-8 rounded-lg shadow-md"
+    method="POST"
+    action="#"
+    aria-label="Formulario para agendar demostración"
+    novalidate
+  >
+    <div class="grid gap-6 mb-6 md:grid-cols-2">
+      <!-- Campo: Nombre completo -->
+      <div>
+        <label
+          for="first_name"
+          class="block mb-2.5 text-sm font-medium text-heading"
+        >
+          Nombre completo
+        </label>
+        <input
+          type="text"
+          id="first_name"
+          name="first_name"
+          class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+          placeholder="Ej: Luis Molero"
+          required
+          aria-required="true"
+          aria-describedby="first_name-error"
+        />
+        <span id="first_name-error" class="sr-only" role="alert"></span>
+      </div>
+
+      <!-- Campo: Correo institucional -->
+      <div>
+        <label
+          for="email"
+          class="block mb-2.5 text-sm font-medium text-heading"
+        >
+          Correo institucional
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+          placeholder="Ej: lmolero@ucompensar.edu.co"
+          required
+          aria-required="true"
+          aria-describedby="email-error"
+        />
+        <span id="email-error" class="sr-only" role="alert"></span>
+      </div>
+
+      <!-- Campo: Organización -->
+      <div>
+        <label
+          for="company"
+          class="block mb-2.5 text-sm font-medium text-heading"
+        >
+          Organización
+        </label>
+        <input
+          type="text"
+          id="company"
+          name="company"
+          class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+          placeholder="Nombre de tu organización"
+          required
+          aria-required="true"
+          aria-describedby="company-error"
+        />
+        <span id="company-error" class="sr-only" role="alert"></span>
+      </div>
+
+      <!-- Campo: Rol -->
+      <div>
+        <label for="rol" class="block mb-2.5 text-sm font-medium text-heading">
+          Rol
+        </label>
+        <input
+          type="text"
+          id="rol"
+          name="rol"
+          class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+          placeholder="Tu rol en la organización"
+          required
+          aria-required="true"
+          aria-describedby="rol-error"
+        />
+        <span id="rol-error" class="sr-only" role="alert"></span>
+      </div>
+
+      <!-- Campo: Comentarios (ancho completo) -->
+      <div class="md:col-span-2">
+        <label
+          for="comentarios"
+          class="block mb-2.5 text-sm font-medium text-heading"
+        >
+          Comentarios
+        </label>
+        <input
+          type="text"
+          id="comentarios"
+          name="comentarios"
+          class="bg-neutral-secondary-medium border border-default-medium text-heading text-base rounded-base focus:ring-brand focus:border-brand block w-full px-4 py-3.5 shadow-xs placeholder:text-body"
+          placeholder="Comentarios adicionales (opcional)"
+          aria-describedby="comentarios-hint"
+        />
+        <span id="comentarios-hint" class="sr-only">
+          Campo opcional para comentarios adicionales
+        </span>
+      </div>
+    </div>
+
+    <!-- Botón de envío -->
+    <div class="flex justify-center mt-8">
+      <button
+        type="submit"
+        class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-semibold leading-5 rounded-base text-base px-8 py-3.5 focus:outline-none transition-colors duration-200 transform hover:scale-105"
+        aria-label="Enviar solicitud de demostración"
+      >
+        Enviar solicitud
+      </button>
+    </div>
+  </form>
+</section>
