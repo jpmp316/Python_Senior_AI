@@ -155,7 +155,8 @@ if __name__ == "__main__":
     
 """
 
-# Veterinaria
+# Desarrolle una super aplicaciónpara una Veterinaria
+
 # Superclase:
 # Animales
 # Subclases:
