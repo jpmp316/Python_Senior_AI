@@ -1,0 +1,8 @@
+  {
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb",
+    "*.pdf": "pdf.preview",
+    "*.png": "default",
+    "*.jfif": "default"
+  }
+  }
