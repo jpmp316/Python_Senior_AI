@@ -1,0 +1,33 @@
+from services.service_task import TaskService
+from repository.repository_task import TaskRepository
+
+def main() -> None:
+    service = TaskService(TaskRepository("data/tasks.txt"))
+    
+    while True:
+        print("\n1. Agregar tarea")
+        print("2. Listar tareas")
+        print("3. Salir")
+        
+        opcion = input("Seleccione una opción: ")
+        
+        if opcion == "1":
+            title = input("Ingrese la tarea: ")
+            try:
+                service.create_task(title)
+                print("Registro guardado")
+            except Exception as e:
+                print("Error", e)
+                
+        elif opcion == "2":
+            tasks = service.list_tasks()
+            for i, task in enumerate(tasks, 1):
+                print(f"{i}. {task.title}")
+            
+        elif opcion == "3":
+            break
+
+if __name__ == "__main__":
+    main()
+    
+                

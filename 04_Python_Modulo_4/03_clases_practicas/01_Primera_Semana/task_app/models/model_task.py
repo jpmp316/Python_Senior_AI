@@ -12,3 +12,4 @@ class Task:
     def deserialize(data: str) -> "Task":
         title, completed = data.split("|")
         return Task(title=title, completed=bool(int(completed)))
+
