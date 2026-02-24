@@ -13,3 +13,7 @@ class Task:
         title, completed = data.split("|")
         return Task(title=title, completed=bool(int(completed)))
 
+
+    def mark_completed(self) -> "Task":
+        return Task(title=self.title, completed=True)
+    
