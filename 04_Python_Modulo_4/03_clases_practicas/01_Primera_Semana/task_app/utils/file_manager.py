@@ -1,5 +1,7 @@
 from pathlib import Path
 from typing import List
+import tempfile
+import os
 
 class FileManager:
     def __init__(self, file_path: str) -> None:
@@ -26,4 +28,19 @@ class FileManager:
                 file.write(text + "\n")
         except OSError as error:
             raise RuntimeError("Error escribiendo el archivo")
-        
+    
+    def overwrite_all(self, lines: List[str]) -> None:
+        try:
+            with tempfile.NamedTemporaryFile(
+                mode="w",
+                encoding="utf-8",
+                delete=False,
+                dir=self._path.parent
+            ) as tmp:
+                for line in lines:
+                    tmp.write(line + "\n")
+                
+            os.replace(tmp.name, self._path)
+        except OSError as error:
+            raise RuntimeError("Error sobreescribiendo el archivo") from error
+

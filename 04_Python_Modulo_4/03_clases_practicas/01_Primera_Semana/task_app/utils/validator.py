@@ -11,3 +11,14 @@ def validate_title(title: str) -> str:
         raise ValueError("Uso de caracter invalido (barra vertical)")
 
     return title
+
+def validate_index(index: int, size: int) -> int:
+    if size == 0:
+        raise ValueError("No hay tareas registradas")
+    if index < 1:
+        raise ValueError("El indice de la tareaa modificar de ser superior a 0")
+    if index > size:
+        raise ValueError("El indice de latarea modificar debe estar dentro del rago de registros")
+    
+    return index - 1
+

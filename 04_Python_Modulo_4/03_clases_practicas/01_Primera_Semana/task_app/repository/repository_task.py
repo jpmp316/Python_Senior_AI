@@ -12,3 +12,8 @@ class TaskRepository:
     def get_all(self) -> List[Task]:
         lines = self._file.read_lines()
         return [Task.deserialize(line) for line in lines if line]
+    
+    def overwrite_all(self, tasks: List[Task]) -> None:
+        serialized = [task.serialize() for task in tasks]
+        self._file.overwrite_all(serialized)
+
