@@ -1,0 +1,13 @@
+{
+  "emails": [
+    "user@@mail.com",
+    "script>alert(1)</script>@mail.com",
+    "user mail.com",
+    ""
+  ],
+  "strings": [
+    "' OR 1=1 --",
+    "\"; DROP TABLE users; --",
+    "<script>alert('xss')</script>"
+  ]
+}
