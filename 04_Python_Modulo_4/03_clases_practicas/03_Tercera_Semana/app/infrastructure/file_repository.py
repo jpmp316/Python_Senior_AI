@@ -15,7 +15,7 @@ class FileRepository:
         usuarios = []
         
         try:
-            with open(self.path, "r", encoding="utf8", newline="") as f:
+            with open(self.path, "r", encoding="utf-8", newline="") as f:
                 reader = csv.DictReader(f)
                 
                 if reader.fieldnames is None:
